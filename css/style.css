@@ -1,0 +1,241 @@
+/* Estilização geral do body */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  overflow-x: hidden;/* oculta a barra de rolagem horizontal */
+  overflow-y: hidden;/* oculta a barra de rolagem vertical */
+}
+
+
+
+/* Centralização e altura mínima para a área principal */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Estilização das sections de login e cadastro */
+section {
+  display: none;  /* Inicialmente ambas as áreas ficam ocultas */
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Estilização da área de login (quando visível) */
+.login {
+  display: block; /* Inicialmente exibe a área de login */
+}
+
+/* Estilização do h1 */
+h1 {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+P {
+  color: white;
+  font-weight: 800;
+}
+
+
+/* Estilização dos campos de input */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 3px solid #060606;
+  border-radius: 19px;
+  background-color: #fafbfb;
+  font-weight: 600;
+  box-sizing: border-box; /* Garante que largura inclua padding e border */
+}
+
+/* Estilização do botão de enviar */
+button {
+  width: 100%;
+  padding: 11px;
+  margin-top: 10px;
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 17px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  box-sizing: border-box; /* Mantém o alinhamento com o input */
+}
+
+
+/* Efeito de hover nos botões */
+button:hover {
+  background-color: rgb(67, 138, 219);
+  color: white;
+}
+
+/* Estilização do link de cadastro */
+.conta button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 5px;
+  transform: transition 0.3s ease-in-out;
+  
+
+}
+
+
+
+.conta button:hover {
+  transform: scale(1.1);;
+}
+
+/* Estilização do texto de erro */
+.nao {
+  color: rgb(253, 253, 253);
+  font-size: 12px;
+  margin-top: 10px;
+  max-width: 300px;
+  margin-left: 25px;
+  display: none;
+}
+
+/* Estilização para centralizar a tela de cadastro */
+.cadastro-container {
+  margin-top: 30px;
+}
+
+/* Estilização dos inputs de cadastro */
+.cadastro-login input::placeholder {
+  color: rgb(0, 0, 0);
+  background-color: #fafbfb;
+  font-weight: 600;
+}
+
+/* Efeito de hover nos botões de cadastro */
+#botao:hover {
+  background-color: rgb(67, 138, 219);
+  color: white;
+}
+
+/* Texto "Bem-vindo" na área de cadastro */
+.conta2 {
+  color: #fafbfb;
+  font-weight: 800;
+}
+
+
+
+
+
+/* Estilização da margem azul */
+.login-container, .cadastro-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 340px;
+  margin: 50px auto;
+  margin-top: 80px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 80px;
+  animation: box-shadow-wave 2s infinite ease-in-out;
+  box-shadow: rgba(46, 182, 240, 0.4) -10px 5px,  /* Aumenta largura no lado esquerdo */
+              rgba(46, 191, 240, 0.3) -20px 10px, /* Aumenta largura no lado esquerdo */
+              rgba(46, 185, 240, 0.2) -90px 15px, /* Aumenta largura no lado esquerdo */
+              rgba(46, 204, 240, 0.1) 90px 20px,  /* Aumenta largura no lado direito */
+              rgba(46, 201, 240, 0.05) 90px 25px; /* Aumenta largura no lado direito */
+}
+ 
+
+
+/* Animação para o box-shadow */
+@keyframes box-shadow-wave {
+  0% {
+      box-shadow: rgba(46, 182, 240, 0.4) -5px 5px, 
+                  rgba(46, 191, 240, 0.3) -10px 10px, 
+                  rgba(46, 185, 240, 0.2) -15px 15px, 
+                  rgba(46, 204, 240, 0.1) -20px 20px, 
+                  rgba(46, 201, 240, 0.05) -25px 25px;
+  }
+  25% {
+      box-shadow: rgba(46, 182, 240, 0.6) -5px 5px, 
+                  rgba(46, 191, 240, 0.4) -10px 10px, 
+                  rgba(46, 185, 240, 0.3) -15px 15px, 
+                  rgba(46, 204, 240, 0.2) -20px 20px, 
+                  rgba(46, 201, 240, 0.1) -25px 25px;
+  }
+  50% {
+      box-shadow: rgba(46, 182, 240, 0.4) -5px 5px, 
+                  rgba(46, 191, 240, 0.3) -10px 10px, 
+                  rgba(46, 185, 240, 0.2) -15px 15px, 
+                  rgba(46, 204, 240, 0.1) -20px 20px, 
+                  rgba(46, 201, 240, 0.05) -25px 25px;
+  }
+  75% {
+      box-shadow: rgba(46, 182, 240, 0.3) -5px 5px, 
+                  rgba(46, 191, 240, 0.2) -10px 10px, 
+                  rgba(46, 185, 240, 0.1) -15px 15px, 
+                  rgba(46, 204, 240, 0.05) -20px 20px, 
+                  rgba(46, 201, 240, 0.02) -25px 25px;
+  }
+  100% {
+      box-shadow: rgba(46, 182, 240, 0.4) -5px 5px, 
+                  rgba(46, 191, 240, 0.3) -10px 10px, 
+                  rgba(46, 185, 240, 0.2) -15px 15px, 
+                  rgba(46, 204, 240, 0.1) -20px 20px, 
+                  rgba(46, 201, 240, 0.05) -25px 25px;
+  }
+}
+
+
+
+/* Media Query para Ajustar Margem no Celular */
+@media (max-width: 767px) {
+  body {
+    padding-left: 40px; /* Adiciona margem esquerda */
+    padding-right: 15px; /* Garante simetria */
+    overflow-x: hidden; /* Remove a barra de rolagem horizontal */
+  }
+
+  .container {
+    margin-left: 10px; /* Ajusta o deslocamento para a direita */
+    margin-right: 10px; /* Garante simetria */
+  }
+}
+
+
+
+
+
+
+/* Media Query para Tablets e iPads Grandes */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    width: 50%; /* Aumenta a largura do formulário */
+    margin: 0 auto; /* Garante centralização */
+    padding: 20px; /* Adiciona mais espaço interno */
+  }
+
+  body {
+    padding: 0 20px; /* Garante um espaço lateral adicional */
+  }
+}

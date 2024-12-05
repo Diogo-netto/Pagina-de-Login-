@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Página de Login</title>
+</head>
+
+<body>
+  <main>
+        <!-- area de login -->
+       <section class="login" style="display: block">
+        <form class="login-form" id="logue" ><!-- Define um formulário com a classe e o ID especificados. O estilo display: block torna a seção visível. -->
+            <div class="login-container"><!-- um contêiner para agrupar os elementos do formulário. -->
+                 <h1>Login</h1>
+                    <label><input id="emaillogin" type="email" placeholder="Email " required></label>
+                    <label><input id="passwordLogin" type="password" placeholder="Senha" required minlength="6"></label>
+                    <button type="submit">Entrar</button>
+
+                    <div class="nao" id="error-message" style="display: none;"></div><!--  Um contêiner para exibir mensagens de erro, inicialmente oculto. -->
+
+                    <div class="conta">
+                       <p>Não tem conta? <button id="btn">Cadastre-se</button></p>
+                    </div>
+            </div>
+        </form>
+      </section>
+      <!-- final da area de login -->
+
+    
+
+
+
+        <!-- começo da area de cadastro -->
+        <section class="cadastro" style="display: none">
+        <form class="cadastro-login" id="cad" >
+          <div class="cadastro-container">
+                  <h1>Cadastre-se</h1>
+                     <label><input id="primeiroNome" type="text" placeholder="Digite seu primeiro Nome"></label>
+                     <label><input id="sobreNome" type="text" placeholder="Digite seu sobrenome"></label>
+                     <label><input id="Email" type="email" placeholder="Email"></label>
+                     <label><input id="password" type="password" placeholder="Senha"></label>
+                     <button  type="submit" id="btn2">Enviar</button>
+ 
+            <div class="conta2">
+               <p>Bem-Vindo</p>
+            </div>
+          </div>
+         </form>
+      </section>
+      <!-- final da area de cadastro -->
+
+        
+  </main>
+      <script src="script.js"></script>
+</body>
+</html>
